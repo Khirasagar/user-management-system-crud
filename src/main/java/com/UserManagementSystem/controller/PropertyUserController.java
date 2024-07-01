@@ -20,8 +20,8 @@ public class PropertyUserController {
     }
 
     //CREATE
-    @PostMapping("/createPropertyUser")
-    public String createPropertyUser(@RequestBody PropertyUserDto dto){
+    @PostMapping("/addPropertyUser")
+    public String addPropertyUser(@RequestBody PropertyUserDto dto){
         pu.addPropertyUser(dto);
         return "Done";
 
