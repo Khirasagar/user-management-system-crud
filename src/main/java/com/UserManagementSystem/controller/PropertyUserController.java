@@ -5,10 +5,7 @@ import com.UserManagementSystem.service.PropertyUser;
 import com.UserManagementSystem.service.PropertyUserImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 //RESTful APIs class - it will make the class as rest api controller
 @RestController
@@ -28,4 +25,14 @@ public class PropertyUserController {
         return new  ResponseEntity<>(propertyUserDto, HttpStatus.CREATED);
 
     }
+    //DELETE
+    @DeleteMapping("/deletePropertyUser")
+    public ResponseEntity<String> deletePropertyUser(@RequestParam long propertyUserId){
+
+        pu.deletePropertyUser(propertyUserId);
+        return new ResponseEntity<>("Record Deleted Successfully !", HttpStatus.OK);
+
+
+    }
+
 }

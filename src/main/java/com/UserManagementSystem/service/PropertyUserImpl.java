@@ -30,4 +30,9 @@ public class PropertyUserImpl implements PropertyUser{
 
         return pud;
     }
+
+    @Override
+    public void deletePropertyUser(long propertyUserId) {
+        propertyUserRepository.deleteById(propertyUserId);
+    }
 }
