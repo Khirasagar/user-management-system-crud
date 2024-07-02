@@ -4,5 +4,5 @@ import com.UserManagementSystem.dto.PropertyUserDto;
 
 public interface PropertyUser {
 
-    public void addPropertyUser(PropertyUserDto dto);
+    public PropertyUserDto addPropertyUser(PropertyUserDto dto);
 }
